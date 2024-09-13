@@ -46,3 +46,17 @@ print(lista.count(20)) # Cuenta cuántas veces sale el elemento indicado en la l
 # split
 print(lista.split(','))
 
+# del
+del(lista[3]) # Borra la posicion 3 de la lista
+print(lista)
+
+# clear
+lista.clear() # Borra todos los elementos de la lista, y la deja vacía
+print(lista)
+print(type(lista))
+
+# del
+# del lista # Elimina la variable lista, y deja de existir
+# print(type(lista))
+# print(lista)
+

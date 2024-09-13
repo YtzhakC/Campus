@@ -6,6 +6,7 @@ def menu(lst):
 
         print(' ')
         print('=' * 50)
+        print('                    ** MENÚ **')
         print('1. Agregar libro')
         print('2. Insertar libro en la segunda posición')
         print('3. Eliminar el libro de la tercera posición')
@@ -31,14 +32,13 @@ def menu(lst):
             print('Listo!, se ha eliminado el libro de la posición #3')
         elif opc == 4:
             print('=' * 50)
-            print('Está bien, la lista de libros es: \n')
-            print(lst, end=', ')
+            print(f'El número total de libros es:{len(lst)} \n')
         elif opc == 5:
             print('=' * 50)
             print('La lista de libros por orden alfabético es:')
             print(sorted(lst))
         elif opc == 6:
-            print('Gracias por usar el software, hasta la próxima!')
+            print('Gracias por usar el software, hasta la próxima!.')
         else:
             print(' ')
             print('>> ERROR. Opción no válida, digite una opción del 1 al 6.')
