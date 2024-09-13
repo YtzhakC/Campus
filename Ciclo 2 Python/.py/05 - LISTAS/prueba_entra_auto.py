@@ -11,4 +11,4 @@ lstNum = []
 for i in range(n):
     lstNum.append(int(input(f'Ingrese el dato #{i+1}: ')))
 
-print(duplicar(lstNum))
+print(lstNum)
