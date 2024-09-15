@@ -7,7 +7,7 @@ def menu(lst):
         print(' ')
         print('=' * 50)
         print('                    ** MENÚ **')
-        print('1. Agregar libro')
+        print('1. Agregar Libro')
         print('2. Insertar libro en la segunda posición')
         print('3. Eliminar el libro de la tercera posición')
         print('4. Mostrar número total de libros')
@@ -32,7 +32,7 @@ def menu(lst):
             print('Listo!, se ha eliminado el libro de la posición #3')
         elif opc == 4:
             print('=' * 50)
-            print(f'El número total de libros es:{len(lst)} \n')
+            print(f'El número total de libros es: {len(lst)} \n')
         elif opc == 5:
             print('=' * 50)
             print('La lista de libros por orden alfabético es:')
@@ -43,4 +43,7 @@ def menu(lst):
             print(' ')
             print('>> ERROR. Opción no válida, digite una opción del 1 al 6.')
 lista = []
+print('='*40)
+print('Hecho por Ytzhak Dawidh Carvajal Contreras')
+print('='*40)
 print(menu(lista))
