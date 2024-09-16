@@ -1,6 +1,6 @@
 inventario = []
 
-def mostrar_menu():
+def menu():
     print('             ** Gestión de un Inventario **')
     print('1. Agregar un producto')
     print('2. Agregar lote de productos')
@@ -46,7 +46,7 @@ def mostrar_total():
 
 def gestion_inventario():
     while True:
-        mostrar_menu()
+        menu()
         opcion = input("Selecciona una opción: ")
         
         if opcion == '1':

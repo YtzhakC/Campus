@@ -22,7 +22,7 @@ def menu(lst):
             print('=' * 50)
             student = input('Digite el nombre del estudiante que desee añadir \n -> ')
             lst.append(student)
-            print(f'Listo!, el estudiante "{student}", se ha añadido correctamente. ')
+            print(f'Listo!, el estudiante "{student}", se ha añadido correctamente. \n ')
         elif opc == 2:
             print('=' * 50)
             n = int(input('Digite el número de estudiante que desee corregir: \n -> '))
