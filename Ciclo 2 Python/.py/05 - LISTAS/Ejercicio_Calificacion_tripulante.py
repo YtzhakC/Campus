@@ -1,5 +1,5 @@
 def aprobacion(nota1, nota2, nota3):
-    app = nota1*0.30 + nota2*0.30 * nota3*0.40
+    app = nota1*0.30 + nota2*0.30 + nota3*0.40
     if app >= 3.0:
         return [f'{app:.2f}', 'Aprobado']
     else:
