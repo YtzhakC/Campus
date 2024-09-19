@@ -1,6 +1,3 @@
-from networkx import NetworkXAlgorithmError
-
-
 def  busquedaLineal(lst, elem): # Se pide la lista y el elemento a buscar
     for i in range(len(lst)):
         if lst[i] == elem:

@@ -1,0 +1,19 @@
+{
+    "1": {
+        "nombre": "Daniel",
+        "edad": 21,
+        "sexo": "m",
+        "telefonos": [
+            123,
+            456
+        ]
+    },
+    "2": {
+        "nombre": "Maria",
+        "edad": 20,
+        "sexo": "f",
+        "telefonos": [
+            789
+        ]
+    }
+}
