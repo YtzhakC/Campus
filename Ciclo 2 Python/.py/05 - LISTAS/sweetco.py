@@ -42,4 +42,3 @@ prod, ingrprod = prodMayIngSem(matVtas, lstPrecios)
 dia, dia_ventas = diaMayVent(matVtas, lstPrecios)
 print(f'El producto que genera más ingresos en la semana es: {prod} - Vendió: ${ingrprod:,}')
 print(f'El dia con mayor venta fue el {dia}, con una venta de {dia_ventas:,}')
-

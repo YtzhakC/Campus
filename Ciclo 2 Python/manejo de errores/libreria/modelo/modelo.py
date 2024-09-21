@@ -1,16 +1,6 @@
-import json
-#import pprint
+# import pprint
 
-def clear():
-    print('\n' * 100)
-
-def guardar(lib):
-    with open('Ciclo 2 Python/manejo de errores/libreria.json', 'w') as fd:
-        json.dump(lib, fd)
-
-    if not fd.closed: # True si el archivo esta cerrado
-        fd.close()
-
+from persistencia.persistencia import guardar
 
 def leerPrecio():
     while True:
@@ -76,6 +66,8 @@ def insertar(lib):
         #pprint.pprint(lib)
         lib = dict(sorted(lib.items()))
         #pprint.pprint(lib)
+
+        guardar(lib)
     else:
         print('El codigo ya existe en la libreria.')
 
@@ -85,45 +77,15 @@ def insertar(lib):
 
 def consultar(lib):
     print('\n\n** 2. CONSULTAR **')
+
+    cod = input('\nCódigo del libro? ')
+
+    if cod in lib:
+        print('-> Codigo', cod)
+        print(f'Título: {lib[cod]["titulo"]}')
+        print(f'Autor: {lib[cod]["autor"]}')
+        print(f'Precio: ${lib[cod]["precio"]}')
+    else:
+        print('>>> Error. El código del libro no existe en la librería.')
+
     input('Presione cualquier tecla para volver al menú...')
-
-def menu():
-    while True:
-        print('** LIBRERIA **')
-        print('1. Insertar')
-        print('2. Consultar')
-        print('3. Salir')
-
-        print('>>> Opcion? ', end='')
-        try:
-            opcion = int(input())
-            if opcion < 1 or opcion > 3:
-                print('Error. Opción no válida.')
-                print('Presione cualquier tecla para volver al menú...')
-                continue
-            return opcion
-        except ValueError:
-            print('Error. Opción no válida.')
-            print('Presione cualquier tecla para volver al menú...')
-
-
-# PROGRAMA PRINCIPAL
-
-libreria = {}
-
-while True:
-    op = menu()
-    match op:
-        case 1:
-            clear()
-            libreria = insertar(libreria)
-            guardar(libreria)
-            clear()
-        case 2:
-            clear()
-            consultar(libreria)
-            clear()
-        case 3:
-            clear()
-            print('\nGracias por usar el software.\n')
-            break
